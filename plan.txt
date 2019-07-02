@@ -1,15 +1,10 @@
--- COMMANDS
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+--commands 
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+--keyword.control
 ABORT
-ALTER DATABASE
-ALTER DEFAULT PRIVILEGES
-ALTER GROUP
-ALTER PROCEDURE
-ALTER SCHEMA
-ALTER TABLE
-ALTER TABLE APPEND
-ALTER USER
-ANALYZE
-ANALYZE COMPRESSION
+ALTER 
+ANALYZE 
 BEGIN
 CALL
 CANCEL
@@ -17,30 +12,11 @@ CLOSE
 COMMENT
 COMMIT
 COPY
-CREATE DATABASE
-CREATE EXTERNAL SCHEMA
-CREATE EXTERNAL TABLE
-CREATE FUNCTION
-CREATE GROUP
-CREATE LIBRARY
-CREATE PROCEDURE
-CREATE SCHEMA
-CREATE TABLE
-CREATE TABLE AS
-CREATE USER
-CREATE VIEW
+CREATE 
 DEALLOCATE
 DECLARE
 DELETE
-DROP DATABASE
-DROP FUNCTION
-DROP GROUP
-DROP LIBRARY
-DROP PROCEDURE
-DROP SCHEMA
-DROP TABLE
-DROP USER
-DROP VIEW
+DROP
 END
 EXECUTE
 EXPLAIN
@@ -52,30 +28,27 @@ PREPARE
 RESET
 REVOKE
 ROLLBACK
-SELECT
-SELECT INTO
+SELECT 
 SET
-SET SESSION AUTHORIZATION
-SET SESSION CHARACTERISTICS
 SHOW
-SHOW PROCEDURE
-START TRANSACTION
+START 
 TRUNCATE
 UNLOAD
 UPDATE
 VACUUM
-
--- DATA TYPES
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+--datatypes 
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+--variable.language 
 BIGINT
 BOOL 
 BOOLEAN
 BPCHAR 
 CHAR
-CHARACTER
-CHARACTER VARYING 
+CHARACTER  
 DATE
 DECIMAL
-DOUBLE PRECISION
+DOUBLE 
 IN8
 INT 
 INT2 
@@ -84,22 +57,25 @@ INTEGER
 NCHAR 
 NUMERIC
 NVARCHAR 
+PRECISION
 REAL
 SMALLINT
 TEXT 
 TIMESTAMP
 TIMESTAMPTZ
-TIMESTAMP WITHOUT TIME ZONE
-TIMESTAMP WITH TIME ZONE
 VARCHAR
+VARYING
 
---FUNCTIONS
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+--functions 
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+--keyword.other
 ABS 
 ACOS
 ADD_MONTHS
-APPROXIMATE PERCENTILE_DISC
+APPROXIMATE 
+PERCENTILE_DISC
 ASIN 
-AT TIME ZONE 
 ATAN 
 ATAN2
 AVG
@@ -270,9 +246,78 @@ VAR_POP
 VAR_SAMP
 VARIANCE 
 VERSION
-
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
 --MISC
-COMMENT, BLOCK 
-COMMENT, SINGLE LINE 
-QUOTED STRING, SINGLE 
-QUOTED STRING, DOUBLE
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+--constant.character
+<
+> 
+<
+>
+=
+!
+||
+--constant.numeric 
+--constant.language 
+ALL 
+AND 
+ANY 
+APPEND
+AS
+AUTHORIZATION
+BETWEEN 
+BY
+CHARACTERISTICS
+COMPRESSION
+DATABASE
+DEFAULT 
+ELSE 
+END 
+EXISTS 
+EXTERNAL 
+FALSE 
+FROM 
+FUNCTION
+GROUP
+ILIKE
+IF
+IN 
+INTO
+IS 
+JOIN 
+LIBRARY
+LIKE 
+NOT 
+ON 
+ORDER
+OVER
+PARTITION
+PRIVILEGES
+PROCEDURE
+SCHEMA
+SESSION 
+SIMILAR
+SOME 
+SYSDATE 
+TABLE
+THEN 
+TO 
+TRANSACTION
+TRUE 
+UNKNOWN
+USER
+VIEW 
+WHERE
+WHEN 
+WITH
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+--comments 
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+comment.line.double-slash
+comment.block
+
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+--strings
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+string.quoted.single
+string.quoted.double
