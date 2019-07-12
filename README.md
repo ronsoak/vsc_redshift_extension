@@ -1,65 +1,48 @@
-# vsc-redshift-extension README
+#Syntax Highlighter for Redshift
+Simply put there is no Syntax Highlighting for Redshift AWS SQL in Visul Studio code.
+So I made my own.
+It aint flashy, it never will be.
 
-This is the README for your extension "vsc-redshift-extension". After writing up a brief description, we recommend including the following sections.
+##Features
+Syntax Highlighting for:
+* SQL Commands like Select, Abort, Begin...
+* SQL Keywords like Date_trunc, Distkey, lower...
+* Single line comments
+* Double line comments
+* Single quote strings
+* Double quote strings
+* SQL Data types like BIGINT, BOOL, VARCHAR
+* SQL Constants such as AND, BETWEEN, ILIKE
+* Support for number highlighting
+* Special Characters like =, <> , =!
 
-## Features
+##Technical Information
+Syntax highlighting is done by corresponding to textmate elements.
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+###Keywords
+Patterns matched to keyword.control:
+ABORT, ALTER, ANALYZE, BEGIN, CALL, CANCEL, CLOSE, COMMENT, COMMIT, COPY, CREATE, DEALLOCATE, DECLARE, DELETE, DROP, END, EXECUTE, EXPLAIN, FETCH, GRANT, INSERT, LOCK, PREPARE, RESET, REVOKE, ROLLBACK, SELECT, SET, SHOW, START, TRUNCATE, UNLOAD, UPDATE, VACUUM
 
-For example if there is an image subfolder under your extension project workspace:
+Patterns matched to keyword.other:
+ABS, ACOS, ADD_MONTHS, APPROXIMATE, PERCENTILE_DISC, ASIN, ATAN, ATAN2, AVG, BIT_AND, BIT_OR, BIT-WISE, BOOL_AND, BOOL_OR, BPCHARCMP, BTRIM, BTTEXT_PATTERN_CMP, CASE, CAST, CBRT, CEIL, CEILING, CHAR_LENGHT, CHARACTER_LENGTH, CHARINDEX, CHECKSUM, CHR, COALESCE, CONCAT, CONVERT, CONVERT_TIMEZONE, COS, COT, COUNT, CRC32, CUME_DIST, CURRENT_DATABASE, CURRENT_DATE, CURRENT_SCHEMA, CURRENT_SCHEMAS, CURRENT_SETTING, CURRENT_USER, CURRENT_USER_ID, DATE_CMP, DATE_CMP_TIMESTAMP, DATE_CMP_TIMESTAMPZ, DATE_PART, DATE_PART_YEAR, DATE_TRUNC, DATEADD, DATEDIFF, DECODE, DEGREES, DENSE_RANK, DEXP, DISTKEY, DISTINCT, DLOG1, DLOG10, EXP, EXTRACT, FIRST_VALUE, FLOOR, FUNC_SHA1, GETDATE, GREATEST, HAS_DATABASE_PRIVILEGE, HAS_SCHEMA_PRIVILEGE, HAS_TABLE_PRIVILEGE, INITCAP, INTERVAL_CMP, IS_VALID_JSON, IS_VALID_JSON_ARRAYT, JSON_ARRAY_LENGHT, JSON_EXTRACT_ARRAY_ELEMENT_TEXT, JSON_EXTRACT_PATH_TEXT, LAG, LAST_DAY, LAST_VALUUE, LEAD, LEAST, LEFT, LEN, LENGTH, LISTAGG, LN, LOG, LOWER, LPAD, LTRIM, MAX, MD5, MEDIAN, MIN, MOD, MONTHS_BETWEEN, NEXT_DAY, NTH_VALUE, NTILE, NULLIF, NVL, NVL2, OCTET_LENGHT, PERCENT_RANK, PERCENTILE_CONT, PERCENTILE_DISC, PG_BACKEND_PID, PG_CANCEL_BACKEND, PG_GET_COLS, PG_GET_LATE_BINDING_VIEW_COLS, PG_LAST_COPY_COUNT, PG_LAST_COPY_ID, PG_LAST_QUERY_ID, PG_LAST_UNLOAD_COUNT, PG_LAST_UNLOAD_ID, PG_TERMINATE_BACKEND, PI, POSISTION, POWER, QUOTE_IDENT, QUOTE_LITERAL, RADIANS, RANDOM, RANK, RATIO_TO_REPORT, REGEXP_COUNT, REGEXP_INSTR, REGEXP_REPLACE, REGEXP_SUBSTR, REPEAT, REPLACE, REPLICATE, REVERSE, RIGHT, ROUND, ROW_NUMBER, RPAD, RTRIM, SESSION_USER, SET_CONFIG, SIGN, SIN, SLICE_NUM, SORTKEY, SPLIT_PART, SQRT, STDDEV, STDDEV_POP, STDDEV_SAMP, STRPOS, STRTOL, SUBSTRING, SUM, SYSDATE, TAN, TEXTLEN, TIMEOFDAY, TIMESTAMP_CMP, TIMESTAMP_CMP_DATE, TIMESTAMP_CMP_TIMESTAMPZ, TIMESTAMPZ_CMP, TIMESTAMPZ_CMP_DATE, TIMESTAMPZ_CMP_TIMESTAMP, TIMEZONE, TO_CHAR, TO_DATE, TO_HEX, TO_NUMBER, TO_TIMESTAMP, TRANSLATE, TRIM, TRUNC, UPPER, USER, VAR_POP, VAR_SAMP, VARIANCE, VERSION
 
-\!\[feature X\]\(images/feature-x.png\)
+###Comments
+Pattern matched to comment.line.double-dash: lines starting with '--'
+Pattern matched to comment.block: Blocks starting with '/*' and ending with '*/'
+###Strings
+Pattern matched to string.quoted.single: Comments encapsulated by ' & '
+Pattern matched to string.quoted.double: Comments encapsulated by " & "
+###Variables
+Patterns matched to variable.language:
+BIGINT, BOOL, BOOLEAN, BPCHAR, CHAR, CHARACTER, DATE, DECIMAL, DOUBLE, IN8, INT, INT2, INT4, INTEGER, NCHAR, NUMERIC, NVARCHAR, PRECISION, REAL, SMALLINT, TEXT, TIMESTAMP, TIMESTAMPTZ, VARCHAR, VARYING
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+###Constants
+Pattern matched to constant.character:
+<,>,=,!
 
-## Requirements
+Pattern matched to constant.language:
+ALL, AND, ANY, APPEND, AS, AUTHORIZATION, BETWEEN, BY, CHARACTERISTICS, COMPRESSION, DATABASE, DEFAULT, ELSE, END, EXISTS, EXTERNAL, FALSE, FROM, FUNCTION, GROUP, ILIKE, IF, IN, INTO, IS, JOIN, LIBRARY, LIKE, NOT, ON, ORDER, OVER, PARTITION, PRIVILEGES, PROCEDURE, SCHEMA, SESSION, SIMILAR, SOME, SYSDATE, TABLE, THEN, TO, TRANSACTION, TRUE, UNKNOWN, USER, VIEW, WHEN, WHERE, WITH
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+Pattern matched to constant.numeric:
+Numbers 0-9
 
-## Extension Settings
-
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: enable/disable this extension
-* `myExtension.thing`: set to `blah` to do something
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
------------------------------------------------------------------------------------------------------------
-
-## Working with Markdown
-
-**Note:** You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (macOS) to see a list of Markdown snippets
-
-### For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**

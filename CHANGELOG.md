@@ -1,9 +1,7 @@
 # Change Log
-
-All notable changes to the "vsc-redshift-extension" extension will be documented in this file.
-
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
-
-## [Unreleased]
-
-- Initial release
+* 0.0.6: I made documentation.
+* 0.0.5: Minor Release, Commit Message: Cleaned up files not needed.
+* 0.0.4: Minor Release, Commit Message: Added Distkey & Sortkey to language.json.
+* 0.0.3: Minor Release, Commit Message: Finished Syntax Highlighting for Redshift.
+* 0.0.2: Minor Release, Commit Message: More Initial Committing.
+* 0.0.1: Minor Release, Commit Message: Initial Commit.

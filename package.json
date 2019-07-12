@@ -2,7 +2,7 @@
     "name": "vsc-redshift-extension",
     "displayName": "vsc_redshift_extension",
     "description": "A VSC extension to support Redshift (AWS) sql work",
-    "version": "0.0.1",
+    "version": "0.0.6",
     "engines": {
         "vscode": "^1.35.0"
     },
