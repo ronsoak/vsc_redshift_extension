@@ -1,4 +1,5 @@
 # Change Log
+* 1.0.1: Added Limit and OR, not sure how I missed them!
 * 1.0.0: Version 1 exists!
 * 0.0.6: I made documentation.
 * 0.0.5: Minor Release, Commit Message: Cleaned up files not needed.
