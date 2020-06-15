@@ -1,5 +1,5 @@
 # Syntax Highlighter for Redshift
-Simply put there is no Syntax Highlighting for Redshift AWS SQL in Visul Studio code.
+Simply put there is no Syntax Highlighting for Redshift AWS SQL in Visual Studio code.
 So I made my own.
 It aint flashy, it never will be.
 
